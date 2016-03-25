@@ -112,7 +112,7 @@ GLuint CreateTextureFromFile(std::string const& strFile)
 {
     fipImage img;
     img.load(strFile.c_str());
-    //img.flipVertical();
+    img.flipVertical();
     img.convertTo32Bits();    
     
     GLuint nTexId;

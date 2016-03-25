@@ -61,6 +61,9 @@
       <AdditionalLibraryDirectories>../DevLib/freeglut/lib/;../DevLib/FreeImage/;../DevLib/glew-1.13.0/lib;</AdditionalLibraryDirectories>
       <AdditionalDependencies>glew32.lib;FreeImagePlus.lib;%(AdditionalDependencies)</AdditionalDependencies>
     </Link>
+    <PostBuildEvent>
+      <Command>copy  ..\DevLib\dll\*.*  $(TargetDir)</Command>
+    </PostBuildEvent>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
